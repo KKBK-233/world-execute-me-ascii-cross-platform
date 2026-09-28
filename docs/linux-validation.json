@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-28",
+  "host": "186.241.105.219",
+  "platform": "Ubuntu 22.04.5 LTS x86_64, Python 3.10.12",
+  "source_tests": {
+    "total": 23,
+    "passed": 19,
+    "skipped": 4
+  },
+  "terminal_service": {
+    "port": 41090,
+    "external_health_check": "passed",
+    "external_ansi_frame": "passed",
+    "audio": "none; host has no PCM output device"
+  },
+  "portable_zip": {
+    "filename": "world-execute-mv-linux-x64.zip",
+    "sha256": "81e7b701a6a8142330e640c356050950c51a8e5c5f81e3f4317c0ee28523301a",
+    "relocated_snapshot": "passed",
+    "audible_playback": "not tested; host has no PCM output device"
+  }
+}

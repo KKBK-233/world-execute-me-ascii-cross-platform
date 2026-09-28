@@ -12,6 +12,7 @@ from player import Film
 class StreamServer(ThreadingHTTPServer):
     daemon_threads = True
     allow_reuse_address = True
+    request_queue_size = 8
 
     def __init__(self, address, *, width=100, height=32, fps=8, max_clients=4,
                  duration=None):
@@ -21,7 +22,30 @@ class StreamServer(ThreadingHTTPServer):
         self.height = height
         self.fps = fps
         self.slots = threading.BoundedSemaphore(max_clients)
+        self.connections = threading.BoundedSemaphore(max_clients + 4)
         self.duration = self.film.config['duration'] if duration is None else duration
+
+    def get_request(self):
+        request, address = super().get_request()
+        request.settimeout(3)
+        return request, address
+
+    def process_request(self, request, client_address):
+        # 在创建线程前限制连接数；空闲连接也不能无限占用 VPS 资源。
+        if not self.connections.acquire(blocking=False):
+            self.shutdown_request(request)
+            return
+        try:
+            super().process_request(request, client_address)
+        except BaseException:
+            self.connections.release()
+            raise
+
+    def process_request_thread(self, request, client_address):
+        try:
+            super().process_request_thread(request, client_address)
+        finally:
+            self.connections.release()
 
 
 class StreamHandler(BaseHTTPRequestHandler):
