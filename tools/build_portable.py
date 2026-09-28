@@ -18,7 +18,8 @@ def main():
         raise SystemExit('请在 Windows 或 Linux 目标平台上构建；macOS 使用原有构建脚本。')
     if not (ROOT/'media/song.mp3').is_file():
         raise SystemExit('请先运行 tools/prepare_media.py 准备内嵌音乐。')
-    if not (ROOT/'README-Windows.md').is_file():
+    readme_name = 'README-Windows.md' if sys.platform == 'win32' else 'README-Linux.md'
+    if not (ROOT/readme_name).is_file():
         raise SystemExit('缺少运行说明。')
     args = [sys.executable, '-m', 'PyInstaller', '--noconfirm', '--onedir', '--console',
             '--noupx', '--name', 'WorldExecuteMV', '--distpath', str(ROOT/'dist'),
@@ -29,7 +30,7 @@ def main():
     args += ['--add-data', f'{ROOT/"media/song.mp3"}{os.pathsep}media', str(ROOT/'player.py')]
     subprocess.run(args, cwd=ROOT, check=True)
     folder = ROOT/'dist/WorldExecuteMV'
-    shutil.copy2(ROOT/'README-Windows.md', folder/'README-Windows.md')
+    shutil.copy2(ROOT/readme_name, folder/readme_name)
     if (ROOT/'media/provenance.json').is_file():
         shutil.copy2(ROOT/'media/provenance.json', folder/'media-provenance.json')
     if sys.platform == 'win32':
