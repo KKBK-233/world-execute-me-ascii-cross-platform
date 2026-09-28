@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.build/
+dist/
+/audio-clock
+*.log
+*.mp4
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.pyz
+
+
+# Local audio input is embedded only in release packages.
+/media/
+*.mp3
+*.wav
+*.flac
+*.m4a
+
+# README artwork
+!/docs/images/mv-cover.png
