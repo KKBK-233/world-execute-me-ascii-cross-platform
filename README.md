@@ -1,82 +1,32 @@
-# world.execute(me); —ascii
+# world.execute(me); 终端 MV
 
-原作及 macOS 版：[yym8224961/world.execute-me-ascii](https://github.com/yym8224961/world.execute-me-ascii)，[macOS v1.0.0 Release](https://github.com/yym8224961/world.execute-me-ascii/releases/tag/v1.0.0)。本仓库在原版基础上增加 Windows / Linux 适配与只读终端画面服务；原作者、歌曲及歌词的权利归原权利人所有。本仓库未提供额外的再分发授权。
+![world.execute(me); 画面预览](docs/images/mv-cover.png)
 
-![world.execute(me);](docs/images/mv-cover.png)
+在终端播放 Mili《world.execute(me);》的字符动画和中英字幕。本仓库提供 Windows / Linux 本地有声版，以及无需登录的在线只读画面。
 
-Mili《world.execute(me);》的字符动画。支持中英字幕、原曲同步播放和终端字符动画。
+| 使用方式 | 入口 | 声音 |
+| --- | --- | --- |
+| 在线观看，Windows / Linux 终端 | `curl -N 'https://www.kkbk.info/world.execute(me);'` | 无 |
+| Windows x64 本地播放 | 从 [Release](https://github.com/KKBK-233/world-execute-me-ascii-cross-platform/releases) 下载 Windows ZIP，解压并运行 `WorldExecuteMV/Play-MV.bat` | 有 |
+| Linux x86_64 本地播放 | 下载 Linux ZIP，解压并运行 `WorldExecuteMV/WorldExecuteMV` | 有，需本机音频输出 |
 
-## Windows / Linux 本地适配
+PowerShell 中也可用 `curl.exe -N 'https://www.kkbk.info/world.execute(me);'`。**URL 必须加引号**，否则括号和分号会被 Shell 当作语法。在线画面在连接后自动从开头播放；按 Ctrl+C 退出。建议终端至少 100 列 × 32 行。
 
-Windows 验收入口和源码运行见 [README-Windows.md](README-Windows.md)，Linux 本机播放与终端画面服务见 [README-Linux.md](README-Linux.md)。Windows 便携版内置音乐和 Python 运行环境；原版 macOS 说明保留如下。
+源码与构建说明：[Windows](README-Windows.md) · [Linux 与在线服务](README-Linux.md)。在线服务使用 [stream_server.py](stream_server.py) 和 [Nginx 路由配置](deploy/blog-nginx-location.conf)，不提供 Shell 或文件下载。
 
-## macOS 单文件运行
+## 仓库导航
 
-从[原仓库的 v1.0.0 Release](https://github.com/yym8224961/world.execute-me-ascii/releases/tag/v1.0.0) 下载 `world-execute-mv-macos.zip` 并解压。音乐、动画、字幕、频谱数据和音频播放组件已经内嵌在 `world-execute-mv.pyz` 内，无需另外下载或指定 MP3。
-
-需要 **macOS 12 或更新版本、Python 3.9 或更新版本**。音频组件同时包含 Apple Silicon 和 Intel 架构。终端播放器自身只使用 Python 标准库。
-
-在 macOS「终端」中进入解压目录运行：
-
-```sh
-python3 world-execute-mv.pyz
-```
-
-也可双击 `运行单文件.command`，在系统终端中播放。按空格开始。推荐全屏，终端至少 64 列 × 24 行，128 列 × 44 行及以上效果更好。
-
-```sh
-# 从 2:38.7 开始直接播放
-python3 world-execute-mv.pyz --start 158.7 --autoplay
-```
-
-内嵌音乐是随程序封装的资源，不是加密或 DRM。播放时会解包到当前用户的临时目录，正常退出后清理；不会读取旧电脑 Downloads 中的文件。运行过程无需联网。
-
-## 操作
-
-| 按键 | 功能 |
+| 路径 | 用途 |
 | --- | --- |
-| 空格 | 开始／暂停 |
-| 左／右 | 后退／前进 5 秒 |
-| R | 从头播放 |
-| Q | 退出 |
-| H | 显示全部帮助 |
-| 1–5 | 跳转章节 |
+| `player.py`、`audio_pcm.py`、`terminal_io.py` | 本地有声播放 |
+| `stream_server.py` | HTTP 终端画面，无音频 |
+| `scenes.py`、`lyrics.json`、`spectrum.json`、`config.json` | 动画、字幕与时间数据 |
+| `assets/` | 可单独使用的 SRT 与 LRC 字幕 |
+| `tools/` | 校验提取音乐、构建便携包 |
+| `tests/` | 播放、资源及 HTTP 服务测试 |
+| `deploy/` | systemd 和博客 Nginx 配置 |
+| `docs/` | 历史验收记录 |
 
-## 从源码运行
+## 来源与权利
 
-仓库不保存音频文件。从源码运行或重新打包前，请将自己的音频放到本地 `media/song.mp3`。使用 Release 播放包无需此步骤。
-
-首次构建音频组件需要 Apple Command Line Tools（含 Swift 编译器）：
-
-```sh
-xcode-select --install
-```
-
-然后执行：
-
-```sh
-./run.sh
-```
-
-启动脚本在缺少 `audio-clock` 时自动编译本机架构。双击 `播放MV.command` 可在 macOS 系统终端中运行源码版。
-
-## 重新打包
-
-```sh
-python3 tools/build_bundle.py
-python3 tests/test_bundle.py
-```
-
-构建输出在 `dist/`：
-
-- `world-execute-mv.pyz`：内嵌音乐的单文件播放器。
-- `world-execute-mv-macos.zip`：包含播放器、启动器、说明的分发包。
-- `SHA256SUMS.txt`：下载校验值。
-
-音频以 macOS 音频时钟驱动画面；暂停、跳转时字幕与动画跟随音频时间。构建会生成 universal 音频组件，并在单文件包内记录各资源 SHA-256 以检查完整性。
-
-## 收录范围
-
-本仓库为项目归档，包含当前播放器、字幕、频谱和构建工具。音乐仅内嵌于 Release 播放包。
-
-原曲与歌词：Mili《world.execute(me);》。本项目是个人创作与备份，未对原曲、歌词或其他第三方素材授予额外使用许可。
+本仓库基于 [yym8224961/world.execute-me-ascii](https://github.com/yym8224961/world.execute-me-ascii) 的画面与资源，原版发布物见[上游 v1.0.0](https://github.com/yym8224961/world.execute-me-ascii/releases/tag/v1.0.0)。歌曲、歌词和原版代码的权利归各自权利人；本仓库没有额外授予再分发或改编许可。便携包内含音乐，使用前请自行确认授权范围。

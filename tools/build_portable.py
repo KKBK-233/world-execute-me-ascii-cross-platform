@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     if sys.platform not in ('win32', 'linux'):
-        raise SystemExit('请在 Windows 或 Linux 目标平台上构建；macOS 使用原有构建脚本。')
+        raise SystemExit('仅支持在 Windows 或 Linux 目标平台上构建。')
     if not (ROOT/'media/song.mp3').is_file():
         raise SystemExit('请先运行 tools/prepare_media.py 准备内嵌音乐。')
     readme_name = 'README-Windows.md' if sys.platform == 'win32' else 'README-Linux.md'

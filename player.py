@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """跨平台字符音乐视频：保留原版画面，适配终端与音频输出。"""
 from __future__ import annotations
-import argparse, bisect, json, math, signal, subprocess
-import sys, threading, time, unicodedata
+import argparse, bisect, json, math, signal
+import sys, time, unicodedata
 from terminal_io import Terminal
 from pathlib import Path
 
@@ -196,34 +196,6 @@ class Film:
         c.box(x,y,w,len(lines)+3,BRIGHT)
         for i,s in enumerate(lines):c.put(x+3,y+2+i,s,WHITE if i==0 else NORMAL)
 
-class NativeAudio:
-    def __init__(self,path):
-        self.state={'time':0.,'duration':0.,'playing':False}
-        self.last=time.monotonic(); self.error=''
-        self.proc=subprocess.Popen([str(ROOT/'audio-clock'),str(path)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,bufsize=1)
-        threading.Thread(target=self.read,daemon=True).start()
-        deadline=time.monotonic()+8
-        while not self.state['duration']:
-            if self.proc.poll() is not None:raise RuntimeError(self.proc.stderr.read() or '音频引擎退出')
-            if time.monotonic()>deadline:raise RuntimeError('音频引擎没有响应')
-            time.sleep(.01)
-    def read(self):
-        for line in self.proc.stdout:
-            try:
-                message=json.loads(line)
-                if 'error' in message:self.error=message['error']
-                else:self.state=message;self.last=time.monotonic()
-            except ValueError:pass
-    def command(self,s):
-        self.proc.stdin.write(s+'\n');self.proc.stdin.flush()
-    def check(self):
-        if self.error or self.proc.poll() is not None or time.monotonic()-self.last>2:
-            raise RuntimeError('macOS 音频引擎不可用，请检查声音输出设备。')
-    def close(self):
-        if self.proc.poll() is None:
-            try:self.command('quit');self.proc.wait(timeout=2)
-            except (BrokenPipeError,subprocess.TimeoutExpired):self.proc.terminate()
-
 def run(args,film):
     # 终端生命周期覆盖音频初始化，任何启动失败都能恢复终端状态。
     with Terminal() as terminal:
@@ -234,12 +206,8 @@ def _run(args,film,terminal):
     audio_path=Path(args.audio).expanduser().resolve() if args.audio else Path(film.config['audio'])
     if not args.audio and not audio_path.is_absolute():audio_path=ROOT/audio_path
     if not audio_path.is_file():raise RuntimeError(f'找不到音频：{audio_path}\n请使用 --audio 指定 MP3 文件。')
-    if args.backend == 'native' or (args.backend == 'auto' and sys.platform == 'darwin'):
-        if sys.platform != 'darwin':raise RuntimeError('native 音频后端仅支持 macOS。')
-        audio=NativeAudio(audio_path)
-    else:
-        from audio_pcm import Audio
-        audio=Audio(audio_path)
+    from audio_pcm import Audio
+    audio=Audio(audio_path)
     offset=args.offset if args.offset is not None else film.config.get('subtitle_offset',0.)
     started=args.autoplay or args.paused; paused=not args.autoplay; help_on=False; volume=args.volume; ready=not started
     current=args.start; playing_seen=False; frames=0; max_render=0.; size_last=None; report=[]
@@ -311,7 +279,6 @@ def main():
     for stream in (sys.stdout,sys.stderr):
         if hasattr(stream,'reconfigure'):stream.reconfigure(encoding='utf-8')
     p=argparse.ArgumentParser(description='world.execute(me); / bilingual terminal MV')
-    p.add_argument('--backend',choices=('auto','pcm','native'),default='auto')
     p.add_argument('--audio');p.add_argument('--start',type=float,default=0.)
     p.add_argument('--autoplay',action='store_true');p.add_argument('--fps',type=int,default=24)
     p.add_argument('--paused',action='store_true')
