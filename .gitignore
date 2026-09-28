@@ -22,3 +22,8 @@ dist/
 
 # README artwork
 !/docs/images/mv-cover.png
+
+# 本地开发环境与构建缓存
+.venv/
+build/
+*.spec

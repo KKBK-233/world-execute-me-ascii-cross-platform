@@ -8,7 +8,7 @@ import zipapp
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = ('player.py', 'scenes.py', 'audio-clock', 'config.json', 'lyrics.json',
+FILES = ('player.py', 'terminal_io.py', 'scenes.py', 'audio-clock', 'config.json', 'lyrics.json',
          'spectrum.json', 'media/song.mp3')
 
 

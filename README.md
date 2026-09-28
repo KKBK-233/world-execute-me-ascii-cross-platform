@@ -4,7 +4,11 @@
 
 Mili《world.execute(me);》的字符动画。支持中英字幕、原曲同步播放和终端字符动画。
 
-## 单文件运行（推荐）
+## Windows / Linux 本地适配
+
+Windows 验收入口、源码运行和 Linux 待验证说明见 [README-Windows.md](README-Windows.md)。Windows 便携版内置音乐和 Python 运行环境；原版 macOS 说明保留如下。
+
+## macOS 单文件运行
 
 从本仓库的 **Releases** 下载 `world-execute-mv-macos.zip` 并解压。音乐、动画、字幕、频谱数据和音频播放组件已经内嵌在 `world-execute-mv.pyz` 内，无需另外下载或指定 MP3。
 
