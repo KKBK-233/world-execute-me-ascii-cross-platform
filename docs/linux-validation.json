@@ -3,9 +3,9 @@
   "host": "186.241.105.219",
   "platform": "Ubuntu 22.04.5 LTS x86_64, Python 3.10.12",
   "source_tests": {
-    "total": 23,
+    "total": 20,
     "passed": 19,
-    "skipped": 4
+    "skipped": 1
   },
   "terminal_service": {
     "port": 41090,
@@ -15,7 +15,7 @@
   },
   "portable_zip": {
     "filename": "world-execute-mv-linux-x64.zip",
-    "sha256": "4fba2529fc62c8720879cb7aca190426e55bfa09b65d432030f79cab94759f25",
+    "sha256": "4eefd8450119c64eb4ea628bd55f9916abcd3c289b1958c47789170be8c19fb9",
     "relocated_snapshot": "passed",
     "audible_playback": "not tested; host has no PCM output device"
   }

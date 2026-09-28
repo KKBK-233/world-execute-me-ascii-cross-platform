@@ -6,7 +6,7 @@
 curl -N 'https://www.kkbk.info/world.execute(me);'
 ```
 
-连接后自动从开头播放，按 Ctrl+C 退出。URL 必须加引号。Windows PowerShell 使用 `curl.exe`。该 HTTP 路由只输出 ANSI 画面和字幕，不传输声音，也不提供登录或远程命令。建议终端至少 100 列 × 32 行。
+连接后自动从开头播放，按 Ctrl+C 退出。URL 必须加引号。Windows PowerShell / CMD 使用 `curl.exe -N "https://www.kkbk.info/world.execute(me);"`。该 HTTP 路由只输出 ANSI 画面和字幕，不传输声音，也不提供登录或远程命令。建议终端至少 100 列 × 32 行。
 
 ## Linux 本地有声播放
 
@@ -24,6 +24,6 @@ python3 -m venv .venv
 
 ## 部署终端画面服务
 
-`stream_server.py` 仅依赖 Python 标准库，在连接后按时间轴输出画面。`deploy/world-execute-stream.service` 可用于直接开放 41090/tcp；`deploy/blog-world-execute.service` 只监听 127.0.0.1:41090，并由 `deploy/blog-nginx-location.conf` 接入博客域名。服务最多允许 4 个观看连接，公开画面约 212 秒一轮。音频文件不是该服务所需资源。
+`stream_server.py` 仅依赖 Python 标准库，在连接后按时间轴输出画面。`deploy/world-execute-stream.service` 可用于直接开放 41090/tcp；`deploy/blog-world-execute.service` 只监听 127.0.0.1:41090，并由[博客仓库的 Nginx 路由](https://github.com/KKBK-233/blog_glm/blob/main/deploy/nginx-world-execute.location.conf)接入域名。服务最多允许 4 个观看连接，公开画面约 212 秒一轮。音频文件不是该服务所需资源。
 
 上游项目与资源权利说明见 [README](README.md)。
