@@ -6,13 +6,13 @@
 
 | 使用方式 | 入口 | 声音 |
 | --- | --- | --- |
-| 在线观看，Windows / Linux 终端 | `curl -N 'https://www.kkbk.info/world.execute(me);'` | 无 |
+| 在线观看，Windows / Linux 终端 | `curl -N "https://www.kkbk.info/world.execute(me);"` | 无 |
 | Windows x64 本地播放 | 从 [Release](https://github.com/KKBK-233/world-execute-me-ascii-cross-platform/releases) 下载 Windows ZIP，解压并运行 `WorldExecuteMV/Play-MV.bat` | 有 |
 | Linux x86_64 本地播放 | 下载 Linux ZIP，解压并运行 `WorldExecuteMV/WorldExecuteMV` | 有，需本机音频输出 |
 
-PowerShell 中也可用 `curl.exe -N 'https://www.kkbk.info/world.execute(me);'`。**URL 必须加引号**，否则括号和分号会被 Shell 当作语法。在线画面在连接后自动从开头播放；按 Ctrl+C 退出。建议终端至少 100 列 × 32 行。
+Windows PowerShell / CMD 请用 `curl.exe -N "https://www.kkbk.info/world.execute(me);"`。**URL 必须加引号**，否则括号和分号会被 Shell 当作语法。在线画面在连接后自动从开头播放；按 Ctrl+C 退出。建议终端至少 100 列 × 32 行。
 
-源码与构建说明：[Windows](README-Windows.md) · [Linux 与在线服务](README-Linux.md)。在线服务使用 [stream_server.py](stream_server.py) 和 [Nginx 路由配置](deploy/blog-nginx-location.conf)，不提供 Shell 或文件下载。
+源码与构建说明：[Windows](README-Windows.md) · [Linux 与在线服务](README-Linux.md)。在线服务使用 [stream_server.py](stream_server.py)，博客的 [Nginx 路由配置](https://github.com/KKBK-233/blog_glm/blob/main/deploy/nginx-world-execute.location.conf) 保存在博客仓库；服务不提供 Shell 或文件下载。
 
 ## 仓库导航
 
@@ -24,7 +24,7 @@ PowerShell 中也可用 `curl.exe -N 'https://www.kkbk.info/world.execute(me);'`
 | `assets/` | 可单独使用的 SRT 与 LRC 字幕 |
 | `tools/` | 校验提取音乐、构建便携包 |
 | `tests/` | 播放、资源及 HTTP 服务测试 |
-| `deploy/` | systemd 和博客 Nginx 配置 |
+| `deploy/` | 两台服务器的 systemd 配置 |
 | `docs/` | 历史验收记录 |
 
 ## 来源与权利
