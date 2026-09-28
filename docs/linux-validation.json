@@ -15,7 +15,7 @@
   },
   "portable_zip": {
     "filename": "world-execute-mv-linux-x64.zip",
-    "sha256": "4eefd8450119c64eb4ea628bd55f9916abcd3c289b1958c47789170be8c19fb9",
+    "sha256": "868d9d6783442fe4df58ab9d99834f8f7159d5cfc8471d800d974c516074354c",
     "relocated_snapshot": "passed",
     "audible_playback": "not tested; host has no PCM output device"
   }
