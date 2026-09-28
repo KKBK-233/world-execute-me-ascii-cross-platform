@@ -124,7 +124,7 @@ class Film:
     def energy(self,t):
         a=self.spectrum['frames']
         return a[min(len(a)-1,max(0,int(t*self.spectrum['fps'])))]
-    def render(self,t,w,h,paused=False,offset=0,help_on=False,ready=False):
+    def render(self,t,w,h,paused=False,offset=0,help_on=False,ready=False,view_only=False):
         c=Canvas(w,h)
         if w<64 or h<24:
             c.center(h//2-2,'WORLD.EXECUTE(ME);',BRIGHT)
@@ -173,7 +173,8 @@ class Film:
         else:
             c.center(h-5,'[ instrumental ]',DIM)
             c.center(h-3,'[ 间奏 ]',DIM)
-        hint='SPACE play/pause   <- -> 5s   R restart   Q quit   H help'
+        hint=('READ-ONLY STREAM   Ctrl+C exit   No audio' if view_only else
+              'SPACE play/pause   <- -> 5s   R restart   Q quit   H help')
         c.center(h-1,crop(hint,w-4),DIM)
         if ready:self.slate(c,top,bottom)
         if help_on:self.help(c,offset)

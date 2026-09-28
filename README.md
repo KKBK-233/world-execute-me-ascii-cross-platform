@@ -1,16 +1,18 @@
 # world.execute(me); —ascii
 
+原作及 macOS 版：[yym8224961/world.execute-me-ascii](https://github.com/yym8224961/world.execute-me-ascii)，[macOS v1.0.0 Release](https://github.com/yym8224961/world.execute-me-ascii/releases/tag/v1.0.0)。本仓库在原版基础上增加 Windows / Linux 适配与只读终端画面服务；原作者、歌曲及歌词的权利归原权利人所有。本仓库未提供额外的再分发授权。
+
 ![world.execute(me);](docs/images/mv-cover.png)
 
 Mili《world.execute(me);》的字符动画。支持中英字幕、原曲同步播放和终端字符动画。
 
 ## Windows / Linux 本地适配
 
-Windows 验收入口、源码运行和 Linux 待验证说明见 [README-Windows.md](README-Windows.md)。Windows 便携版内置音乐和 Python 运行环境；原版 macOS 说明保留如下。
+Windows 验收入口和源码运行见 [README-Windows.md](README-Windows.md)，Linux 本机播放与终端画面服务见 [README-Linux.md](README-Linux.md)。Windows 便携版内置音乐和 Python 运行环境；原版 macOS 说明保留如下。
 
 ## macOS 单文件运行
 
-从本仓库的 **Releases** 下载 `world-execute-mv-macos.zip` 并解压。音乐、动画、字幕、频谱数据和音频播放组件已经内嵌在 `world-execute-mv.pyz` 内，无需另外下载或指定 MP3。
+从[原仓库的 v1.0.0 Release](https://github.com/yym8224961/world.execute-me-ascii/releases/tag/v1.0.0) 下载 `world-execute-mv-macos.zip` 并解压。音乐、动画、字幕、频谱数据和音频播放组件已经内嵌在 `world-execute-mv.pyz` 内，无需另外下载或指定 MP3。
 
 需要 **macOS 12 或更新版本、Python 3.9 或更新版本**。音频组件同时包含 Apple Silicon 和 Intel 架构。终端播放器自身只使用 Python 标准库。
 
