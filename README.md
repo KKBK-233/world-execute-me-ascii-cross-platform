@@ -12,7 +12,7 @@
 
 Windows PowerShell / CMD 请用 `curl.exe -N "https://www.kkbk.info/world.execute(me);"`。**URL 必须加引号**，否则括号和分号会被 Shell 当作语法。在线画面在连接后自动从开头播放；按 Ctrl+C 退出。建议终端至少 100 列 × 32 行。
 
-源码与构建说明：[Windows](README-Windows.md) · [Linux 与在线服务](README-Linux.md)。在线服务使用 [stream_server.py](stream_server.py)，博客的 [Nginx 路由配置](https://github.com/KKBK-233/blog_glm/blob/main/deploy/nginx-world-execute.location.conf) 保存在博客仓库；服务不提供 Shell 或文件下载。
+源码与构建说明：[Windows](README-Windows.md) · [Linux 与在线服务](README-Linux.md)。在线服务使用 [stream_server.py](stream_server.py)，博客的 Nginx 路由配置保存在私有 `blog_glm` 仓库；服务不提供 Shell 或文件下载。
 
 ## 仓库导航
 
