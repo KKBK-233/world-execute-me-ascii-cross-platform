@@ -1,0 +1,2 @@
+-r requirements.txt
+pywinpty==3.0.2; sys_platform == "win32"
