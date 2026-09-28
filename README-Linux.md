@@ -14,7 +14,7 @@ Windows 若 `curl` 被 PowerShell 映射为别的命令，可使用 `curl.exe -N
 
 ## Linux 本机有声播放
 
-有声版本需要 Linux 主机有可用的音频输出设备及 PortAudio。进入项目目录后：
+有声版本需要 Linux 主机有可用的音频输出设备及 PortAudio。Ubuntu 22.04 首次准备可安装 `python3.10-venv` 和 `libportaudio2`；进入项目目录后：
 
 ```sh
 python3 -m venv .venv
@@ -24,6 +24,8 @@ python3 -m venv .venv
 ```
 
 默认按空格开始；使用 `./run-linux.sh --autoplay` 可立即播放。无声服务器没有 PCM 播放设备，因此该服务器只能验证源码运行、资源、画面与构建，不能代表有声实播验收。
+
+已构建的 Ubuntu 22.04 x86_64 便携 ZIP 可解压后运行 `WorldExecuteMV/WorldExecuteMV`，包内含 Python、音乐和 PortAudio 库。常规 `unzip` 会保留可执行权限；若使用 Python `zipfile` 解压，需对该程序运行 `chmod +x`。该包尚未在有声 Linux 桌面验收，也未验证其他发行版或架构。
 
 ## 服务部署配置
 
