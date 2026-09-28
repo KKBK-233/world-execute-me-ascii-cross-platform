@@ -1,0 +1,1284 @@
+{
+  "date": "2026-09-28",
+  "platform": "Windows 11 x64",
+  "unit_tests": {
+    "passed": 17,
+    "skipped_macos_only": 3
+  },
+  "exe_smoke": {
+    "autoplay": {
+      "frames": 53,
+      "last_time": 2.049649210064672,
+      "max_frame_render_seconds": 0.0,
+      "audio_underflows": 0,
+      "samples": [
+        {
+          "audio_time": 1.0932795098051429,
+          "playing": true,
+          "width": 128,
+          "height": 44,
+          "frames": 30
+        }
+      ]
+    },
+    "pause_resume": {
+      "frames": 79,
+      "last_time": 1.5064331849571317,
+      "max_frame_render_seconds": 0.015999999945051968,
+      "audio_underflows": 0,
+      "samples": [
+        {
+          "audio_time": 1.0652918106643483,
+          "playing": true,
+          "width": 128,
+          "height": 44,
+          "frames": 30
+        },
+        {
+          "audio_time": 1.5064331849571317,
+          "playing": false,
+          "width": 128,
+          "height": 44,
+          "frames": 60
+        }
+      ]
+    },
+    "seek_right": {
+      "frames": 14,
+      "last_time": 25.0,
+      "max_frame_render_seconds": 0.015999999945051968,
+      "audio_underflows": 0,
+      "samples": []
+    },
+    "seek_left": {
+      "frames": 14,
+      "last_time": 15.0,
+      "max_frame_render_seconds": 0.015000000013969839,
+      "audio_underflows": 0,
+      "samples": []
+    },
+    "chapter": {
+      "frames": 26,
+      "last_time": 177.94712761393748,
+      "max_frame_render_seconds": 0.0,
+      "audio_underflows": 0,
+      "samples": []
+    },
+    "restart_help": {
+      "frames": 31,
+      "last_time": 0.704804576234892,
+      "max_frame_render_seconds": 0.015000000013969839,
+      "audio_underflows": 0,
+      "samples": [
+        {
+          "audio_time": 0.6761176489526406,
+          "playing": true,
+          "width": 128,
+          "height": 44,
+          "frames": 30
+        }
+      ]
+    },
+    "ctrl_c": {
+      "frames": 7,
+      "last_time": 0,
+      "max_frame_render_seconds": 0.0,
+      "audio_underflows": 0,
+      "samples": []
+    }
+  },
+  "full_song": {
+    "frames": 5090,
+    "last_time": 211.90666666666667,
+    "max_frame_render_seconds": 0.030999999959021807,
+    "audio_underflows": 0,
+    "samples": [
+      {
+        "audio_time": 1.0801695600384846,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 30
+      },
+      {
+        "audio_time": 2.333232735749334,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 60
+      },
+      {
+        "audio_time": 3.587583058164455,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 90
+      },
+      {
+        "audio_time": 4.833167708478868,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 120
+      },
+      {
+        "audio_time": 6.083847159985453,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 150
+      },
+      {
+        "audio_time": 7.33382825832814,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 180
+      },
+      {
+        "audio_time": 8.580817934358492,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 210
+      },
+      {
+        "audio_time": 9.833738123066723,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 240
+      },
+      {
+        "audio_time": 11.079387908568606,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 270
+      },
+      {
+        "audio_time": 12.333147634170018,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 300
+      },
+      {
+        "audio_time": 13.582984508480877,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 330
+      },
+      {
+        "audio_time": 14.830207058577798,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 360
+      },
+      {
+        "audio_time": 16.079663408570923,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 390
+      },
+      {
+        "audio_time": 17.33064920839388,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 420
+      },
+      {
+        "audio_time": 18.584901508525945,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 450
+      },
+      {
+        "audio_time": 19.831944634206593,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 480
+      },
+      {
+        "audio_time": 21.081929484265856,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 510
+      },
+      {
+        "audio_time": 22.330778634292074,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 540
+      },
+      {
+        "audio_time": 23.579941258532926,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 570
+      },
+      {
+        "audio_time": 24.830528908525594,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 600
+      },
+      {
+        "audio_time": 26.080099534243345,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 630
+      },
+      {
+        "audio_time": 27.331861308426596,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 660
+      },
+      {
+        "audio_time": 28.583474658546038,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 690
+      },
+      {
+        "audio_time": 29.834205515799113,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 720
+      },
+      {
+        "audio_time": 31.084669908392243,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 750
+      },
+      {
+        "audio_time": 32.33029965800233,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 780
+      },
+      {
+        "audio_time": 33.58319031144492,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 810
+      },
+      {
+        "audio_time": 34.83395958482288,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 840
+      },
+      {
+        "audio_time": 36.08000135864131,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 870
+      },
+      {
+        "audio_time": 37.33269348414615,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 900
+      },
+      {
+        "audio_time": 38.5837605886627,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 930
+      },
+      {
+        "audio_time": 39.83473838423379,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 960
+      },
+      {
+        "audio_time": 41.084520989097655,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 990
+      },
+      {
+        "audio_time": 42.33181263424922,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1020
+      },
+      {
+        "audio_time": 43.58069275843445,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1050
+      },
+      {
+        "audio_time": 44.834718308527954,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1080
+      },
+      {
+        "audio_time": 46.083143951022066,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1110
+      },
+      {
+        "audio_time": 47.33484585955739,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1140
+      },
+      {
+        "audio_time": 48.58143228280824,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1170
+      },
+      {
+        "audio_time": 49.83174230856821,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1200
+      },
+      {
+        "audio_time": 51.085020158439875,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1230
+      },
+      {
+        "audio_time": 52.33225235994905,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1260
+      },
+      {
+        "audio_time": 53.58188195840921,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1290
+      },
+      {
+        "audio_time": 54.83577818435151,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1320
+      },
+      {
+        "audio_time": 56.082506608450785,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1350
+      },
+      {
+        "audio_time": 57.335592900635675,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1380
+      },
+      {
+        "audio_time": 58.58468701131642,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1410
+      },
+      {
+        "audio_time": 59.834461732418276,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1440
+      },
+      {
+        "audio_time": 61.08346323564183,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1470
+      },
+      {
+        "audio_time": 62.33602244919166,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1500
+      },
+      {
+        "audio_time": 63.58443793479819,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1530
+      },
+      {
+        "audio_time": 64.8320225084899,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1560
+      },
+      {
+        "audio_time": 66.08474293432664,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1590
+      },
+      {
+        "audio_time": 67.33378188416827,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1620
+      },
+      {
+        "audio_time": 68.5820512843784,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1650
+      },
+      {
+        "audio_time": 69.83103918423876,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1680
+      },
+      {
+        "audio_time": 71.08228834567126,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1710
+      },
+      {
+        "audio_time": 72.33264440996572,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1740
+      },
+      {
+        "audio_time": 73.58439985848963,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1770
+      },
+      {
+        "audio_time": 74.83357097581029,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1800
+      },
+      {
+        "audio_time": 76.08450368430931,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1830
+      },
+      {
+        "audio_time": 77.3336473100353,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1860
+      },
+      {
+        "audio_time": 78.58364722284023,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1890
+      },
+      {
+        "audio_time": 79.8357357843779,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1920
+      },
+      {
+        "audio_time": 81.0811089941999,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1950
+      },
+      {
+        "audio_time": 82.33350015850738,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 1980
+      },
+      {
+        "audio_time": 83.58510335849132,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2010
+      },
+      {
+        "audio_time": 84.83293933572713,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2040
+      },
+      {
+        "audio_time": 86.08525580994319,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2070
+      },
+      {
+        "audio_time": 87.33391627494711,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2100
+      },
+      {
+        "audio_time": 88.58454559056554,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2130
+      },
+      {
+        "audio_time": 89.83598166005686,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2160
+      },
+      {
+        "audio_time": 91.0855991190765,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2190
+      },
+      {
+        "audio_time": 92.333031784161,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2220
+      },
+      {
+        "audio_time": 93.58279300981667,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2250
+      },
+      {
+        "audio_time": 94.83454390848055,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2280
+      },
+      {
+        "audio_time": 96.08247100841254,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2310
+      },
+      {
+        "audio_time": 97.33303483412601,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2340
+      },
+      {
+        "audio_time": 98.58496615861077,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2370
+      },
+      {
+        "audio_time": 99.83152980857994,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2400
+      },
+      {
+        "audio_time": 101.08569886989426,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2430
+      },
+      {
+        "audio_time": 102.33443210856058,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2460
+      },
+      {
+        "audio_time": 103.5844905085396,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2490
+      },
+      {
+        "audio_time": 104.83493090851698,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2520
+      },
+      {
+        "audio_time": 106.08490660774987,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2550
+      },
+      {
+        "audio_time": 107.33647828409448,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2580
+      },
+      {
+        "audio_time": 108.58227883419022,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2610
+      },
+      {
+        "audio_time": 109.83233930217102,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2640
+      },
+      {
+        "audio_time": 111.08198077604175,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2670
+      },
+      {
+        "audio_time": 112.33609770855401,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2700
+      },
+      {
+        "audio_time": 113.58606395858806,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2730
+      },
+      {
+        "audio_time": 114.83212798426393,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2760
+      },
+      {
+        "audio_time": 116.08570785843767,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2790
+      },
+      {
+        "audio_time": 117.33489026187453,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2820
+      },
+      {
+        "audio_time": 118.58717265853193,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2850
+      },
+      {
+        "audio_time": 119.8331270533381,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2880
+      },
+      {
+        "audio_time": 121.08708270848729,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2910
+      },
+      {
+        "audio_time": 122.33430560864508,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2940
+      },
+      {
+        "audio_time": 123.58507638412993,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 2970
+      },
+      {
+        "audio_time": 124.8329868086148,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3000
+      },
+      {
+        "audio_time": 126.0875910546165,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3030
+      },
+      {
+        "audio_time": 127.33307620848063,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3060
+      },
+      {
+        "audio_time": 128.59124625846744,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3090
+      },
+      {
+        "audio_time": 129.83603320864495,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3120
+      },
+      {
+        "audio_time": 131.09053304581903,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3150
+      },
+      {
+        "audio_time": 132.33257268427406,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3180
+      },
+      {
+        "audio_time": 133.58500208263285,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3210
+      },
+      {
+        "audio_time": 134.83822466398124,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3240
+      },
+      {
+        "audio_time": 136.08483723574318,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3270
+      },
+      {
+        "audio_time": 137.33993825211655,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3300
+      },
+      {
+        "audio_time": 138.58607055991888,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3330
+      },
+      {
+        "audio_time": 139.83378735859878,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3360
+      },
+      {
+        "audio_time": 141.08268268429674,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3390
+      },
+      {
+        "audio_time": 142.3379253357416,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3420
+      },
+      {
+        "audio_time": 143.584936058498,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3450
+      },
+      {
+        "audio_time": 144.83793048432563,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3480
+      },
+      {
+        "audio_time": 146.08580525848083,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3510
+      },
+      {
+        "audio_time": 147.33381070848554,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3540
+      },
+      {
+        "audio_time": 148.58918125997297,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3570
+      },
+      {
+        "audio_time": 149.83284280856606,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3600
+      },
+      {
+        "audio_time": 151.08609449572396,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3630
+      },
+      {
+        "audio_time": 152.33487790857907,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3660
+      },
+      {
+        "audio_time": 153.58822695841081,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3690
+      },
+      {
+        "audio_time": 154.83499853429385,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3720
+      },
+      {
+        "audio_time": 156.08534655859694,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3750
+      },
+      {
+        "audio_time": 157.33517443411984,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3780
+      },
+      {
+        "audio_time": 158.58403458306566,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3810
+      },
+      {
+        "audio_time": 159.83668883435894,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3840
+      },
+      {
+        "audio_time": 161.08763670839835,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3870
+      },
+      {
+        "audio_time": 162.3377096586628,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3900
+      },
+      {
+        "audio_time": 163.58438731788192,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3930
+      },
+      {
+        "audio_time": 164.83547665853985,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3960
+      },
+      {
+        "audio_time": 166.08405078283977,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 3990
+      },
+      {
+        "audio_time": 167.33646143379156,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4020
+      },
+      {
+        "audio_time": 168.58464945852757,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4050
+      },
+      {
+        "audio_time": 169.8382016585674,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4080
+      },
+      {
+        "audio_time": 171.08468063431792,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4110
+      },
+      {
+        "audio_time": 172.3385806242004,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4140
+      },
+      {
+        "audio_time": 173.5879010084318,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4170
+      },
+      {
+        "audio_time": 174.83590118424036,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4200
+      },
+      {
+        "audio_time": 176.08430725848302,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4230
+      },
+      {
+        "audio_time": 177.3337342531886,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4260
+      },
+      {
+        "audio_time": 178.5875530586345,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4290
+      },
+      {
+        "audio_time": 179.83684830996208,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4320
+      },
+      {
+        "audio_time": 181.08640398422722,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4350
+      },
+      {
+        "audio_time": 182.33710650994908,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4380
+      },
+      {
+        "audio_time": 183.58483840851113,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4410
+      },
+      {
+        "audio_time": 184.8372498404933,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4440
+      },
+      {
+        "audio_time": 186.08876070857514,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4470
+      },
+      {
+        "audio_time": 187.33888997102622,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4500
+      },
+      {
+        "audio_time": 188.5883601742098,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4530
+      },
+      {
+        "audio_time": 189.83454383420758,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4560
+      },
+      {
+        "audio_time": 191.08430083433632,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4590
+      },
+      {
+        "audio_time": 192.33859844319522,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4620
+      },
+      {
+        "audio_time": 193.58698945993092,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4650
+      },
+      {
+        "audio_time": 194.83537720853928,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4680
+      },
+      {
+        "audio_time": 196.0849225372076,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4710
+      },
+      {
+        "audio_time": 197.33746636332944,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4740
+      },
+      {
+        "audio_time": 198.58741580857895,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4770
+      },
+      {
+        "audio_time": 199.83548873430118,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4800
+      },
+      {
+        "audio_time": 201.08782088418957,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4830
+      },
+      {
+        "audio_time": 202.33466760849115,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4860
+      },
+      {
+        "audio_time": 203.5885768586304,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4890
+      },
+      {
+        "audio_time": 204.83800147636794,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4920
+      },
+      {
+        "audio_time": 206.0888321857201,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4950
+      },
+      {
+        "audio_time": 207.335718080285,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 4980
+      },
+      {
+        "audio_time": 208.5873874357203,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 5010
+      },
+      {
+        "audio_time": 209.83878790854942,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 5040
+      },
+      {
+        "audio_time": 211.08828370994888,
+        "playing": true,
+        "width": 128,
+        "height": 44,
+        "frames": 5070
+      }
+    ]
+  },
+  "relocated_exe_snapshot": "passed",
+  "original_scenes_lyrics_spectrum": "byte-identical",
+  "scope": "真实输出设备静音验证；实际听感和音画主观同步待用户验收；Linux 与 macOS 未实机验证"
+}
