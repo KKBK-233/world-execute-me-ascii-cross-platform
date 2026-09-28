@@ -1,0 +1,5 @@
+# 跨平台脚本保持明确换行，避免 Windows 检出破坏 Linux 入口。
+*.sh text eol=lf
+*.command text eol=lf
+*.bat text eol=crlf
+*.py text eol=lf
