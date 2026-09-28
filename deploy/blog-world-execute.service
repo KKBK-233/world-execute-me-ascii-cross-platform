@@ -1,0 +1,24 @@
+[Unit]
+Description=world.execute(me); blog terminal animation
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/world-execute-me-ascii
+ExecStart=/usr/bin/python3 /opt/world-execute-me-ascii/stream_server.py --host 127.0.0.1 --port 41090 --width 100 --height 32 --fps 8 --max-clients 4
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+MemoryMax=180M
+CPUQuota=50%
+TasksMax=20
+
+[Install]
+WantedBy=multi-user.target

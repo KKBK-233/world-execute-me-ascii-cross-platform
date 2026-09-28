@@ -1,32 +1,29 @@
-# Linux 运行与终端观看
+# Linux 本地播放与在线终端画面
 
-## 服务器上的只读画面
-
-`stream_server.py` 使用 Python 标准库输出 ANSI 动画与字幕，不需要音频设备、账户登录或 Python 第三方依赖。每位观众从影片开头独立观看；画面无声音，也不能通过连接控制播放。
-
-Windows PowerShell / CMD 与 Linux 终端都可以运行：
-
-```text
-curl -N http://186.241.105.219:41090/
-```
-
-Windows 若 `curl` 被 PowerShell 映射为别的命令，可使用 `curl.exe -N http://186.241.105.219:41090/`。建议终端至少 100 列、32 行；按 Ctrl+C 退出。服务只开放 `/` 画面和 `/healthz` 健康检查，不提供 Shell 或文件下载。默认最多 4 人同时观看，画面每秒 8 帧，单次播放约 212 秒。公开端口上的画面与歌词可以被任何能连到端口的人观看。
-
-## Linux 本机有声播放
-
-有声版本需要 Linux 主机有可用的音频输出设备及 PortAudio。Ubuntu 22.04 首次准备可安装 `python3.10-venv` 和 `libportaudio2`；进入项目目录后：
+## 直接在线观看
 
 ```sh
+curl -N 'https://www.kkbk.info/world.execute(me);'
+```
+
+连接后自动从开头播放，按 Ctrl+C 退出。URL 必须加引号。Windows PowerShell 使用 `curl.exe`。该 HTTP 路由只输出 ANSI 画面和字幕，不传输声音，也不提供登录或远程命令。建议终端至少 100 列 × 32 行。
+
+## Linux 本地有声播放
+
+从 [Release](https://github.com/KKBK-233/world-execute-me-ascii-cross-platform/releases) 下载 Linux x86_64 ZIP，解压后运行 `WorldExecuteMV/WorldExecuteMV`。首次源码运行可按 Ubuntu 22.04 示例准备：
+
+```sh
+sudo apt install python3-venv libportaudio2 libsndfile1
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python tools/prepare_media.py
+.venv/bin/python tools/prepare_media.py --download
 ./run-linux.sh
 ```
 
-默认按空格开始；使用 `./run-linux.sh --autoplay` 可立即播放。无声服务器没有 PCM 播放设备，因此该服务器只能验证源码运行、资源、画面与构建，不能代表有声实播验收。
+默认按空格开始，`./run-linux.sh --autoplay` 可直接播放。构建便携包需先安装 `requirements-build.txt`，再运行 `tools/build_portable.py`。Linux 包已在 Ubuntu 22.04 x86_64 上验证解压后输出画面；测试服务器没有 PCM 输出设备，有声实播仍待验证。其他发行版与架构也未验收。
 
-已构建的 Ubuntu 22.04 x86_64 便携 ZIP 可解压后运行 `WorldExecuteMV/WorldExecuteMV`，包内含 Python、音乐和 PortAudio 库。常规 `unzip` 会保留可执行权限；若使用 Python `zipfile` 解压，需对该程序运行 `chmod +x`。该包尚未在有声 Linux 桌面验收，也未验证其他发行版或架构。
+## 部署终端画面服务
 
-## 服务部署配置
+`stream_server.py` 仅依赖 Python 标准库，在连接后按时间轴输出画面。`deploy/world-execute-stream.service` 可用于直接开放 41090/tcp；`deploy/blog-world-execute.service` 只监听 127.0.0.1:41090，并由 `deploy/blog-nginx-location.conf` 接入博客域名。服务最多允许 4 个观看连接，公开画面约 212 秒一轮。音频文件不是该服务所需资源。
 
-`deploy/world-execute-stream.service` 将画面服务作为隔离的 systemd 动态用户运行，限制内存、CPU 和并发。它只读取 `/opt/world-execute-me-ascii` 下的源码与 JSON 资源。开放 41090/tcp 前应确认宿主机防火墙及云平台防火墙；无需修改现有 SSH 服务。
+上游项目与资源权利说明见 [README](README.md)。

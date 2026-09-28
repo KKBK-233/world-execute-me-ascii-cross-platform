@@ -7,4 +7,4 @@ if [ ! -x "$ROOT/.venv/bin/python" ]; then
     exit 1
 fi
 export PYTHONUTF8=1
-exec "$ROOT/.venv/bin/python" "$ROOT/player.py" --backend pcm "$@"
+exec "$ROOT/.venv/bin/python" "$ROOT/player.py" "$@"
