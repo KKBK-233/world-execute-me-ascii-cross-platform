@@ -24,7 +24,7 @@ Windows PowerShell / CMD 请用 `curl.exe -N "https://www.kkbk.info/world.execut
 | `assets/` | 可单独使用的 SRT 与 LRC 字幕 |
 | `tools/` | 校验提取音乐、构建便携包 |
 | `tests/` | 播放、资源及 HTTP 服务测试 |
-| `deploy/` | 两台服务器的 systemd 配置 |
+| `deploy/` | 博客服务器的 systemd 配置 |
 | `docs/` | 历史验收记录 |
 
 ## 来源与权利
